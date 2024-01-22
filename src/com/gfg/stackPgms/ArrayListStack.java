@@ -29,7 +29,7 @@ class MyStack1
 	{
 		return al.size();
 	}
-	
+	//
 	boolean isEmpty()
 	{
 	return	al.isEmpty();
