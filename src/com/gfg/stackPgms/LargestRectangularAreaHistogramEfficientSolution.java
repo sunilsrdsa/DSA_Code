@@ -6,19 +6,19 @@ public class LargestRectangularAreaHistogramEfficientSolution {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int arr[] = new int[] {6,2,5,4,1,5,6};
+		long arr[] = new long[] {6,2,5,4,1,5,6};
 		
 		System.out.println("Max Area  :"+getMaxArea(arr,arr.length));
 
 }
 
-	private static int getMaxArea(int[] arr, int n) {
+	private static long getMaxArea(long[] arr, long n) {
 		// TODO Auto-generated method stub
 		
 		Stack<Integer> s = new Stack<>();
-		int res =0;
+		long res =0;
 		int tp;
-		int curr;
+		long curr;
 		
 		for(int i=0; i<n; i++)
 		{
