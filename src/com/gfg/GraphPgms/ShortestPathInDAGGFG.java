@@ -36,19 +36,20 @@ class Graph
 	void topologicalSortUtil(int v, Boolean visited[], Stack stack)
 	{
 		visited[v] = true;
-		Integer i;
 		Iterator<AdjListNode> it = adj[v].iterator();
-		
 		while(it.hasNext())
 		{
 			AdjListNode node = it.next();
 			if(!visited[node.getV()])
 				topologicalSortUtil(node.getV(), visited, stack);				
-		}
-		
+		}		
 		stack.add(v);
 	}
+	
+	// s --> is the starting point
 	public void shortestPath(int s) {
+		
+		//Create a stack to store the toposort
         Stack stack = new Stack();
         //Store the Distance
         int dist[] = new int[V];
@@ -57,6 +58,7 @@ class Graph
         for(int i=0; i<V; i++)
         	visited[i] = false;
         
+        // Code for doing Topological sort and store the toposort values in stack
         for(int i=0; i<V; ++i)
         {
         	if(visited[i] == false)
