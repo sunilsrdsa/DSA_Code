@@ -29,6 +29,7 @@ public class KosarajuAlgo {
 		
 		KosarajuAlgo ks = new KosarajuAlgo();
 		
+		System.out.println("Following are strongly connected Components: ");
 		int count = ks.kosaraju(V,adj);
 		System.out.println("No of Strongly Connected Components: "+count);
 
@@ -90,6 +91,7 @@ public class KosarajuAlgo {
 			{
 				count+=1;
 				helperDFS(node, vis, adjT);
+				System.out.println();
 			}
 		}
 		
@@ -101,6 +103,7 @@ public class KosarajuAlgo {
 		// Mark the node as visited
 		vis[node] = 1;
 		
+		System.out.print(node+" ");
 		//Traverse all the adjacent nodes
 		for(int it : adjT.get(node))
 		{
